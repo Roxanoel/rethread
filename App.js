@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
 
 import Dashboard from './screens/Dashboard';
 
@@ -9,10 +9,10 @@ export default function App() {
   const projects = JSON.parse(JSON.stringify(MOCKDATA.projects));
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Dashboard projectsData={projects} />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
