@@ -25,9 +25,7 @@ export default function App() {
               component={Dashboard}
               initialParams={{ projectsData: projects }}
             />
-            <Stack.Screen
-            name="ProjectDetails"
-            component={ProjectDetails} />
+            <Stack.Screen name="ProjectDetails" component={ProjectDetails} />
           </Stack.Navigator>
           <StatusBar style="auto" />
         </NavigationContainer>

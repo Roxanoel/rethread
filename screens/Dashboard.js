@@ -4,6 +4,10 @@ import Spacer from "../components/util/Spacer";
 
 function Dashboard({ route }) {
     const { projectsData } = route.params;
+
+    function onPressHandler() {
+        console.log('Pressed');
+    }
   
     return (
     <FlatList
@@ -12,7 +16,7 @@ function Dashboard({ route }) {
       data={projectsData}
       keyExtractor={(project) => project.id}
       renderItem={(project) => {
-        return <ProjectCard name={project.item.name} />;
+        return <ProjectCard name={project.item.name} onPress={onPressHandler} />;
       }}
     />
   );
