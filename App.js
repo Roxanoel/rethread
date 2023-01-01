@@ -5,9 +5,10 @@ import { StyleSheet, SafeAreaView, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Dashboard from "./screens/Dashboard";
-
 import * as MOCKDATA from "./dev/mock-data.json";
+
+import ProjectDetails from "./screens/ProjectDetails";
+import Dashboard from "./screens/Dashboard";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,9 @@ export default function App() {
               component={Dashboard}
               initialParams={{ projectsData: projects }}
             />
+            <Stack.Screen
+            name="ProjectDetails"
+            component={ProjectDetails} />
           </Stack.Navigator>
           <StatusBar style="auto" />
         </NavigationContainer>
