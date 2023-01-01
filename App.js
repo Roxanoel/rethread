@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, SafeAreaView, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 
 import Dashboard from "./screens/Dashboard";
 
@@ -10,10 +11,12 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.outerContainer}>
+      <NavigationContainer>
       <View style={styles.innerContainer}>
         <Dashboard projectsData={projects} />
       </View>
       <StatusBar style="auto" />
+      </NavigationContainer>
     </SafeAreaView>
   );
 }
