@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import Dashboard from './screens/Dashboard';
+
+import * as MOCKDATA from './dev/mock-data.json';
+
 export default function App() {
+  const projects = JSON.parse(JSON.stringify(MOCKDATA.projects));
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Dashboard projectsData={projects} />
       <StatusBar style="auto" />
     </View>
   );

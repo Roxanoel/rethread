@@ -1,9 +1,16 @@
-import { Text } from "react-native";
+import { FlatList, Text } from "react-native";
 
-function Dashboard() {
-    return(
-        <Text>Dashboard screen dummy component</Text>
-    )
+function Dashboard({ projectsData }) {
+
+  return (
+    <FlatList
+      data={projectsData}
+      keyExtractor={(project) => project.id}
+      renderItem={(project) => { 
+        return (<Text>{project.item.name}</Text>);
+      }}
+    />
+  );
 }
 
 export default Dashboard;
