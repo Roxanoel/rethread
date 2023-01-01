@@ -1,4 +1,5 @@
 import { FlatList, Text } from "react-native";
+import ProjectCard from "../components/dashboard/ProjectCard";
 
 function Dashboard({ projectsData }) {
 
@@ -7,7 +8,7 @@ function Dashboard({ projectsData }) {
       data={projectsData}
       keyExtractor={(project) => project.id}
       renderItem={(project) => { 
-        return (<Text>{project.item.name}</Text>);
+        return (<ProjectCard name={project.item.name} />);
       }}
     />
   );
