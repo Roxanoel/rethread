@@ -1,9 +1,11 @@
 import { Text, View } from "react-native";
 
-function ProjectDetails() {
+function ProjectDetails({ route }) {
+    const projectData = route.params.project;
+    
     return (
         <View>
-            <Text>This is the project details screen</Text>
+            <Text>{projectData.name}</Text>
         </View>
     )
 }
