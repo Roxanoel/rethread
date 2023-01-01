@@ -2,11 +2,17 @@ import { FlatList, StyleSheet } from "react-native";
 import ProjectCard from "../components/dashboard/ProjectCard";
 import Spacer from "../components/util/Spacer";
 
-function Dashboard({ route }) {
+function Dashboard({ route, navigation }) {
     const { projectsData } = route.params;
 
-    function onPressHandler() {
-        console.log('Pressed');
+    function renderProjectCard(project) {
+        function onPressHandler() {
+            navigation.navigate("ProjectDetails", {
+                project: project.item,
+              });
+        }
+        
+        return <ProjectCard name={project.item.name} onPress={onPressHandler} />;
     }
   
     return (
@@ -15,9 +21,7 @@ function Dashboard({ route }) {
       ItemSeparatorComponent={Spacer}
       data={projectsData}
       keyExtractor={(project) => project.id}
-      renderItem={(project) => {
-        return <ProjectCard name={project.item.name} onPress={onPressHandler} />;
-      }}
+      renderItem={renderProjectCard}
     />
   );
 }
