@@ -2,8 +2,10 @@ import { FlatList, StyleSheet } from "react-native";
 import ProjectCard from "../components/dashboard/ProjectCard";
 import Spacer from "../components/util/Spacer";
 
-function Dashboard({ projectsData }) {
-  return (
+function Dashboard({ route }) {
+    const { projectsData } = route.params;
+  
+    return (
     <FlatList
       contentContainerStyle={styles.projectsList}
       ItemSeparatorComponent={Spacer}
