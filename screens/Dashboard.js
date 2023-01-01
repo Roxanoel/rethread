@@ -21,6 +21,5 @@ export default Dashboard;
 const styles = StyleSheet.create({
   projectsList: {
     flex: 1,
-    backgroundColor: "blue",
   },
 });

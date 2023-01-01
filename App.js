@@ -1,3 +1,5 @@
+import 'react-native-gesture-handler';
+
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, SafeAreaView, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -33,6 +35,5 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     padding: 16,
-    backgroundColor: 'red',
   },
 });
