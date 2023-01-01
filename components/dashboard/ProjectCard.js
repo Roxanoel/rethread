@@ -1,10 +1,12 @@
 import { StyleSheet, View, Text, Pressable } from "react-native";
+import PALETTE from "../../assets/PALETTE";
 
 function ProjectCard({ name, onPress, color }) {
-  return (
+  
+    return (
     <Pressable onPress={onPress}>
       <View style={[styles.card, {backgroundColor: color}]}>
-        <Text>{name}</Text>
+        <Text style={styles.cardTitle}>{name}</Text>
       </View>
     </Pressable>
   );
@@ -19,4 +21,9 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     minHeight: 96, // For now
   },
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: PALETTE.primary700 // For now, add support for customizing later 
+  }
 });
