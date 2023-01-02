@@ -1,16 +1,28 @@
 {
-"projects": [
+  "projects": [
     {
-        "id": "project_1",
-        "name": "My Project"
-    },
-    {
-        "id": "project_2",
-        "name": "Another project"
-    },
-    {
-        "id": "project_3",
-        "name": "Another one!"
+      "id": "project_1",
+      "name": "My Project",
+      "prep": {
+        "pattern": "",
+        "size":"",
+        "patternPhotoPath": "",
+        "fabricIdeas": [{ "fabricName": "", "fabricSwatch": "" }],
+        "adjustments": [""],
+        "notions": [""],
+        "notes": ""
+      },
+      "progress": {
+        "steps": [""],
+        "notes": [""]
+      },
+      "review": {
+        "images": [""],
+        "whatWentWell": "",
+        "learned": "",
+        "whatToImprove": "",
+        "wouldRedo": true 
+      }
     }
-]
+  ]
 }
