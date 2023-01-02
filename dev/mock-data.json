@@ -4,24 +4,31 @@
       "id": "project_1",
       "name": "My Project",
       "prep": {
-        "pattern": "",
-        "size":"",
+        "pattern": "Simplicity 0000",
+        "size": "8",
         "patternPhotoPath": "",
-        "fabricIdeas": [{ "fabricName": "", "fabricSwatch": "" }],
-        "adjustments": [""],
-        "notions": [""],
-        "notes": ""
+        "fabricIdeas": [{ "fabricName": "Cotton poplin", "fabricSwatch": "" }],
+        "adjustments": ["SBA 0.5 inch"],
+        "notions": ["2x 13mm buttons", "0.5m elastic waistband"],
+        "notes": "This is an example of a note I could have written for this project. "
       },
       "progress": {
-        "steps": [""],
-        "notes": [""]
+        "steps": [
+          "Cut pattern pieces",
+          "Assemble legs",
+          "Install elastic",
+          "Hem"
+        ],
+        "notes": [
+          "This is yet another example of a note I could have written here"
+        ]
       },
       "review": {
         "images": [""],
-        "whatWentWell": "",
-        "learned": "",
-        "whatToImprove": "",
-        "wouldRedo": true 
+        "whatWentWell": "This is where the user can describe the things that went well with this project. For example, perhaps the pattern was easier than originally thought, and the hems turned out great.",
+        "learned": "The user can use this space to indicate what they learned, for example maybe this was their first time doing a bust adjustment or installing an invisible zipper.",
+        "whatToImprove": "This is the space allocated to discuss any difficulties encountered. For example, maybe the fabric would have needed more stretch, or a different stitch should have been chosen.",
+        "wouldRedo": true
       }
     }
   ]
