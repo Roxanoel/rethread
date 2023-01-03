@@ -10,7 +10,7 @@ function ProjectDetails({ route, navigation }) {
 
     return (
         <View>
-            <Text>{projectData.name}</Text>
+            <Text>{JSON.stringify(projectData)}</Text>
         </View>
     )
 }
