@@ -3,7 +3,7 @@
     {
       "id": "project_1",
       "name": "My Project",
-      "prep": {
+      "planning": {
         "pattern": "Simplicity 0000",
         "size": "8",
         "patternPhotoPath": "",
