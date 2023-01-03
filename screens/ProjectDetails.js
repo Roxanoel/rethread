@@ -17,7 +17,7 @@ function ProjectDetails({ route, navigation }) {
 
   return (
     <View style={styles.detailsContainer}>
-      <BottomTab.Navigator>
+      <BottomTab.Navigator screenOptions={{headerShown: false}}>
         <BottomTab.Screen name="Planning" component={ProjectPlanning} initialParams={{ projectData: projectData.planning}} />
         <BottomTab.Screen name="Progress" component={ProjectProgress} initialParams={{ projectData: projectData.progress}} />
         <BottomTab.Screen name="Review" component={ProjectReview} initialParams={{projectData: projectData.review}} />
