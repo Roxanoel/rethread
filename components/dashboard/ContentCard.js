@@ -1,4 +1,5 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
+
 import PALETTE from "../../assets/PALETTE";
 
 function ContentCard({ children, title, color }) {
@@ -20,10 +21,12 @@ const styles = StyleSheet.create({
       width: "100%",
       borderRadius: 16,
       minHeight: 96, // For now
+      marginBottom: 8, 
     },
     cardTitle: {
       fontSize: 16,
       fontWeight: 'bold',
-      color: PALETTE.primary700 // For now, add support for customizing later 
+      color: PALETTE.primary700, // For now, add support for customizing later 
+      marginBottom: 8,
     }
   });
