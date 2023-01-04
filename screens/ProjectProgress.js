@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
+import ContentCard from "../components/dashboard/ContentCard";
 
 import DetailsHeader from "../components/project-details/DetailsHeader";
 
@@ -8,7 +9,12 @@ function ProjectProgress({ route, navigation }) {
     return (
         <View style={{flex: 1}}>
             <DetailsHeader title="Progress" />
-            <Text>{JSON.stringify(projectData)}</Text>
+            <ContentCard title="Steps">
+                <FlatList data={projectData.steps} keyExtractor={(item, index) => index} renderItem={(step) => <Text>{step.item}</Text>} />
+            </ContentCard>
+            <ContentCard title="Notes">
+                <Text>{projectData.notes}</Text>
+            </ContentCard>
         </View>
     )}
 
