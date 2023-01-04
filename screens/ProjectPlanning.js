@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList } from "react-native";
+import { Text, View, StyleSheet, FlatList, ScrollView } from "react-native";
 import ContentCard from "../components/dashboard/ContentCard";
 
 import DetailsHeader from "../components/project-details/DetailsHeader";
@@ -8,8 +8,8 @@ function ProjectPlanning({ route, navigation }) {
 
   return (
     <View style={{ flex: 1 }}>
-      <DetailsHeader title="Planning" />
-      <View style={styles.cardsContainer}>
+      <ScrollView style={styles.cardsContainer}>
+        <DetailsHeader title="Planning" />
         <ContentCard title="Pattern information">
           <Text>Pattern: {projectData.pattern}</Text>
           <Text>Size: {projectData.size}</Text>
@@ -24,13 +24,17 @@ function ProjectPlanning({ route, navigation }) {
             renderItem={(fabric) => <Text>{JSON.stringify(fabric.item)}</Text>}
           />
         </ContentCard>
-        <ContentCard title="Notions" >
-            <FlatList data={projectData.notions} keyExtractor={(item, index) => index.toString()} renderItem={(notion) => <Text>{JSON.stringify(notion.item)}</Text>} />
+        <ContentCard title="Notions">
+          <FlatList
+            data={projectData.notions}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={(notion) => <Text>{JSON.stringify(notion.item)}</Text>}
+          />
         </ContentCard>
         <ContentCard title="Notes">
-            <Text>{projectData.notes}</Text>
+          <Text>{projectData.notes}</Text>
         </ContentCard>
-      </View>
+      </ScrollView>
     </View>
   );
 }
