@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, FlatList, ScrollView } from "react-native";
 import ContentCard from "../components/dashboard/ContentCard";
 
 import DetailsHeader from "../components/project-details/DetailsHeader";
+import PatternInfo from "../components/project-details/planning/PatternInfo";
 
 function ProjectPlanning({ route, navigation }) {
   const projectData = route.params.projectData;
@@ -11,9 +12,7 @@ function ProjectPlanning({ route, navigation }) {
       <ScrollView style={styles.cardsContainer}>
         <DetailsHeader title="Planning" />
         <ContentCard title="Pattern information">
-          <Text>Pattern: {projectData.pattern}</Text>
-          <Text>Size: {projectData.size}</Text>
-          <Text>If photo, path: {projectData.patternPhotoPath}</Text>
+          <PatternInfo patternName={projectData.pattern} size={projectData.size} photo={projectData.patternPhotoPath} />
         </ContentCard>
         <ContentCard title="Fabric Ideas">
           {projectData.fabricIdeas.map((fabric, index) => {
