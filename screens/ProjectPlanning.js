@@ -16,20 +16,14 @@ function ProjectPlanning({ route, navigation }) {
           <Text>If photo, path: {projectData.patternPhotoPath}</Text>
         </ContentCard>
         <ContentCard title="Fabric Ideas">
-          <FlatList
-            data={projectData.fabricIdeas}
-            keyExtractor={(fabric, index) =>
-              fabric.fabricName + index.toString()
-            }
-            renderItem={(fabric) => <Text>{JSON.stringify(fabric.item)}</Text>}
-          />
+          {projectData.fabricIdeas.map((fabric, index) => {
+            return <Text key={fabric.fabricName + index}>{JSON.stringify(fabric)}</Text>
+          })}
         </ContentCard>
         <ContentCard title="Notions">
-          <FlatList
-            data={projectData.notions}
-            keyExtractor={(item, index) => index.toString()}
-            renderItem={(notion) => <Text>{JSON.stringify(notion.item)}</Text>}
-          />
+          {projectData.notions.map((notion, index) => {
+            return <Text key={index}>{JSON.stringify(notion)}</Text>
+          })}
         </ContentCard>
         <ContentCard title="Notes">
           <Text>{projectData.notes}</Text>
